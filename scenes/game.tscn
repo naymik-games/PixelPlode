@@ -1,0 +1,280 @@
+[gd_scene load_steps=19 format=3 uid="uid://dh1hp1b8ybkkj"]
+
+[ext_resource type="Script" path="res://scripts/grid.gd" id="2_yc0wg"]
+[ext_resource type="PackedScene" uid="uid://o0c4jv3gwpbb" path="res://scenes/aim_indicator.tscn" id="3_3c62d"]
+[ext_resource type="Texture2D" uid="uid://bw837ibitnequ" path="res://assets/dash.png" id="3_c06s1"]
+[ext_resource type="FontFile" uid="uid://b0of6m237nk5" path="res://assets/Stacked pixel.ttf" id="3_fji3l"]
+[ext_resource type="Texture2D" uid="uid://bjwu8bdf061v4" path="res://assets/game_panel.png" id="3_poiw3"]
+[ext_resource type="PackedScene" uid="uid://byi5d7n7ug2t3" path="res://scenes/wall.tscn" id="3_wofed"]
+[ext_resource type="Texture2D" uid="uid://d2cwjxtm8lth0" path="res://assets/switch_button.png" id="4_6en0m"]
+[ext_resource type="Texture2D" uid="uid://pv8xc6xpjclq" path="res://assets/pp_logo.png" id="5_2ip0v"]
+[ext_resource type="Texture2D" uid="uid://d0bpus48ecqti" path="res://assets/button_0.png" id="5_cxgw3"]
+[ext_resource type="Texture2D" uid="uid://bv7r0pooqh0s8" path="res://assets/stars0.png" id="5_wryoy"]
+[ext_resource type="Texture2D" uid="uid://dkldr78ao4onm" path="res://assets/button_1.png" id="6_sthc2"]
+[ext_resource type="Script" path="res://scripts/stars.gd" id="6_wfpmr"]
+[ext_resource type="Texture2D" uid="uid://d2ycpl4w8j17r" path="res://assets/button_atlas.png" id="9_7hfql"]
+[ext_resource type="PackedScene" uid="uid://b3y1euljby6qe" path="res://scenes/scene_transition.tscn" id="13_8yf8h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mxpk"]
+bg_color = Color(0.235294, 0.34902, 0.337255, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_waj8i"]
+bg_color = Color(0.67451, 0.541176, 0.443137, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c610s"]
+atlas = ExtResource("9_7hfql")
+region = Rect2(92, 38, 129, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2qr5"]
+atlas = ExtResource("9_7hfql")
+region = Rect2(92, 0, 129, 38)
+
+[node name="game" type="Node2D"]
+
+[node name="wall" parent="." instance=ExtResource("3_wofed")]
+position = Vector2(0, 64)
+
+[node name="background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 517.0
+offset_bottom = 1200.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0156863, 0.215686, 0.231373, 1)
+
+[node name="grid" type="Node2D" parent="." groups=["main_game"]]
+script = ExtResource("2_yc0wg")
+
+[node name="do_explode_timer" type="Timer" parent="grid"]
+one_shot = true
+
+[node name="post_launch_timer" type="Timer" parent="grid"]
+wait_time = 0.1
+one_shot = true
+
+[node name="end_round_timer" type="Timer" parent="grid"]
+wait_time = 0.75
+one_shot = true
+
+[node name="meter" type="Node2D" parent="grid"]
+position = Vector2(15, 611)
+
+[node name="power_bar" type="ProgressBar" parent="grid/meter"]
+custom_minimum_size = Vector2(20, 200)
+offset_right = 4.0
+offset_bottom = 27.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0mxpk")
+theme_override_styles/fill = SubResource("StyleBoxFlat_waj8i")
+step = 1.0
+fill_mode = 3
+show_percentage = false
+
+[node name="aim_indicator" parent="grid" instance=ExtResource("3_3c62d")]
+visible = false
+
+[node name="line_layer" type="CanvasLayer" parent="."]
+
+[node name="aim_line" type="Line2D" parent="line_layer"]
+texture_repeat = 2
+width = 4.0
+default_color = Color(0.321569, 0.807843, 0.443137, 1)
+texture = ExtResource("3_c06s1")
+texture_mode = 1
+
+[node name="start_ball" type="Sprite2D" parent="line_layer"]
+z_index = 1
+z_as_relative = false
+scale = Vector2(2, 2)
+
+[node name="RayCast2D" type="RayCast2D" parent="line_layer/start_ball"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 512.0
+offset_bottom = 64.0
+texture = ExtResource("3_poiw3")
+patch_margin_left = 12
+patch_margin_top = 14
+patch_margin_right = 15
+patch_margin_bottom = 12
+axis_stretch_horizontal = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect"]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 512.0
+offset_bottom = 56.0
+theme_override_constants/separation = 54
+alignment = 1
+
+[node name="logo" type="TextureRect" parent="NinePatchRect/HBoxContainer"]
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+texture = ExtResource("5_2ip0v")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Button" type="Button" parent="NinePatchRect/HBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Explode"
+
+[node name="level_label" type="Label" parent="NinePatchRect/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fji3l")
+theme_override_font_sizes/font_size = 40
+text = "LV 0-0"
+
+[node name="state_label" type="Label" parent="NinePatchRect/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fji3l")
+theme_override_font_sizes/font_size = 40
+
+[node name="percent_label" type="Label" parent="NinePatchRect/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fji3l")
+theme_override_font_sizes/font_size = 40
+text = "0%"
+
+[node name="best_label" type="Label" parent="NinePatchRect/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.647059, 0, 0.113725, 1)
+theme_override_fonts/font = ExtResource("3_fji3l")
+theme_override_font_sizes/font_size = 40
+text = "0%"
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = 832.0
+offset_right = 512.0
+offset_bottom = 896.0
+grow_vertical = 0
+texture = ExtResource("3_poiw3")
+patch_margin_left = 12
+patch_margin_top = 14
+patch_margin_right = 15
+patch_margin_bottom = 12
+axis_stretch_horizontal = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="NinePatchRect2"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 17.0
+offset_right = 496.0
+offset_bottom = 51.0
+theme_override_constants/separation = 9
+
+[node name="level_small_btton" type="TextureButton" parent="NinePatchRect2/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture_normal = ExtResource("5_cxgw3")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="replay_small_button" type="TextureButton" parent="NinePatchRect2/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+texture_normal = ExtResource("6_sthc2")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="NinePatchRect2/HBoxContainer"]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+text = "C"
+color = Color(0.31748, 0.0644573, 0.257061, 1)
+edit_alpha = false
+
+[node name="bomb_label" type="Label" parent="NinePatchRect2/HBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fji3l")
+theme_override_font_sizes/font_size = 32
+text = "bomb"
+
+[node name="angle_label" type="Label" parent="NinePatchRect2/HBoxContainer"]
+layout_mode = 2
+
+[node name="power_label" type="Label" parent="NinePatchRect2/HBoxContainer"]
+layout_mode = 2
+
+[node name="switch_button" type="TextureButton" parent="."]
+offset_left = 460.0
+offset_top = 845.0
+offset_right = 498.0
+offset_bottom = 883.0
+texture_normal = ExtResource("4_6en0m")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 512.0
+offset_right = 512.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer/CenterContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+texture = ExtResource("3_poiw3")
+patch_margin_left = 12
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 12
+axis_stretch_horizontal = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="result_label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fji3l")
+theme_override_font_sizes/font_size = 60
+text = "COMPLETE"
+horizontal_alignment = 1
+
+[node name="end_percent_label" type="Label" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_fji3l")
+theme_override_font_sizes/font_size = 30
+text = "93%"
+horizontal_alignment = 1
+
+[node name="TextureRect2" type="MarginContainer" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 38)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="stars" type="TextureRect" parent="CanvasLayer/CenterContainer/VBoxContainer/TextureRect2"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("5_wryoy")
+script = ExtResource("6_wfpmr")
+
+[node name="replay_button" type="TextureButton" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_c610s")
+
+[node name="level_button" type="TextureButton" parent="CanvasLayer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_j2qr5")
+
+[node name="scene_transition" parent="." instance=ExtResource("13_8yf8h")]
+
+[connection signal="update_stars" from="grid" to="CanvasLayer/CenterContainer/VBoxContainer/TextureRect2/stars" method="_on_grid_update_stars"]
+[connection signal="timeout" from="grid/do_explode_timer" to="grid" method="_on_do_explode_timer_timeout"]
+[connection signal="timeout" from="grid/post_launch_timer" to="grid" method="_on_post_launch_timer_timeout"]
+[connection signal="timeout" from="grid/end_round_timer" to="grid" method="_on_end_round_timer_timeout"]
+[connection signal="pressed" from="NinePatchRect/HBoxContainer/Button" to="grid" method="_on_button_pressed"]
+[connection signal="pressed" from="NinePatchRect2/HBoxContainer/level_small_btton" to="grid" method="_on_level_small_btton_pressed"]
+[connection signal="pressed" from="NinePatchRect2/HBoxContainer/replay_small_button" to="grid" method="_on_replay_small_button_pressed"]
+[connection signal="color_changed" from="NinePatchRect2/HBoxContainer/ColorPickerButton" to="grid" method="_on_color_picker_button_color_changed"]
+[connection signal="pressed" from="switch_button" to="grid" method="_on_switch_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/replay_button" to="grid" method="_on_replay_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/level_button" to="grid" method="_on_level_button_pressed"]

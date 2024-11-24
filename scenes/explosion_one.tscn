@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://dwbjncaabnvom"]
+
+[ext_resource type="Script" path="res://scripts/animated_explosion.gd" id="1_r5elt"]
+[ext_resource type="Texture2D" uid="uid://qeabqks55gl" path="res://assets/effects/NewSprite16.png" id="2_qmmre"]
+[ext_resource type="Texture2D" uid="uid://ckegtpr4c1v2g" path="res://assets/effects/NewSprite17.png" id="3_7kqrk"]
+[ext_resource type="Texture2D" uid="uid://1fn2b3obloev" path="res://assets/effects/NewSprite18.png" id="4_x8ne5"]
+[ext_resource type="Texture2D" uid="uid://cp6yja2hk1x7" path="res://assets/effects/NewSprite19.png" id="5_k7b3v"]
+[ext_resource type="Texture2D" uid="uid://184msyaq0bkn" path="res://assets/effects/NewSprite20.png" id="6_anm63"]
+[ext_resource type="Texture2D" uid="uid://dqf67nyhw6hxw" path="res://assets/effects/NewSprite21.png" id="7_re6ut"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4la2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qmmre")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7kqrk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_x8ne5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k7b3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_anm63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_re6ut")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 12.0
+}]
+
+[node name="explosion_one" type="Node2D"]
+script = ExtResource("1_r5elt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_r4la2")
+animation = &"explode"
+autoplay = "explode"
+frame = 5
+frame_progress = 1.0
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

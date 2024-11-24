@@ -1,0 +1,147 @@
+[gd_scene load_steps=15 format=3 uid="uid://bo8beqoho5083"]
+
+[ext_resource type="Script" path="res://scripts/level_select.gd" id="1_awyhx"]
+[ext_resource type="Texture2D" uid="uid://0em6c67rwgqn" path="res://assets/levels/Group 1/01-010.png" id="2_i1ygt"]
+[ext_resource type="Texture2D" uid="uid://d2ycpl4w8j17r" path="res://assets/button_atlas.png" id="2_q4lob"]
+[ext_resource type="Script" path="res://scripts/preview.gd" id="2_r33ul"]
+[ext_resource type="Texture2D" uid="uid://pv8xc6xpjclq" path="res://assets/pp_logo.png" id="3_v4v4q"]
+[ext_resource type="Script" path="res://scripts/stars_preview.gd" id="4_khrsj"]
+[ext_resource type="FontFile" uid="uid://b6871hvsncspa" path="res://assets/Gamer.ttf" id="4_pgmyl"]
+[ext_resource type="Texture2D" uid="uid://xto53o457vjs" path="res://assets/play_button.png" id="6_ag5ra"]
+[ext_resource type="PackedScene" uid="uid://b3y1euljby6qe" path="res://scenes/scene_transition.tscn" id="9_yugwb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vx3wj"]
+atlas = ExtResource("2_q4lob")
+region = Rect2(0, 114, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s24uo"]
+atlas = ExtResource("2_q4lob")
+region = Rect2(96, 114, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jctxr"]
+atlas = ExtResource("2_q4lob")
+region = Rect2(48, 114, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jaty"]
+atlas = ExtResource("2_q4lob")
+region = Rect2(144, 114, 48, 48)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ih5g2"]
+load_path = "res://.godot/imported/stars0.png-45038dfbfcd05ddd93115070fa24a319.ctex"
+
+[node name="level_select" type="Node"]
+script = ExtResource("1_awyhx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.237483, 0.384045, 0.27736, 1)
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+offset_top = 14.0
+offset_right = 512.0
+offset_bottom = 74.0
+theme_override_constants/separation = 75
+alignment = 1
+
+[node name="prev_button" type="TextureButton" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = SubResource("AtlasTexture_vx3wj")
+texture_disabled = SubResource("AtlasTexture_s24uo")
+
+[node name="01-001" type="TextureButton" parent="HBoxContainer2"]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+texture_normal = ExtResource("3_v4v4q")
+stretch_mode = 0
+
+[node name="next_button" type="TextureButton" parent="HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+texture_normal = SubResource("AtlasTexture_jctxr")
+texture_disabled = SubResource("AtlasTexture_0jaty")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 2.0
+offset_top = 84.0
+offset_right = 509.0
+offset_bottom = 124.0
+theme_override_constants/separation = 100
+alignment = 1
+
+[node name="page_title" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.847977, 0.745003, 0.670766, 1)
+theme_override_fonts/font = ExtResource("4_pgmyl")
+theme_override_font_sizes/font_size = 64
+text = "PAGE 1"
+horizontal_alignment = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+offset_top = 174.0
+offset_right = 511.0
+offset_bottom = 302.0
+
+[node name="preview" type="HBoxContainer" parent="MarginContainer2" groups=["preview"]]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+script = ExtResource("2_r33ul")
+
+[node name="preview_image" type="TextureRect" parent="MarginContainer2/preview"]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+texture = ExtResource("2_i1ygt")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer2/preview"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="level_name_label" type="Label" parent="MarginContainer2/preview/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_pgmyl")
+theme_override_font_sizes/font_size = 64
+text = "R2D2"
+
+[node name="stars" type="TextureRect" parent="MarginContainer2/preview/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = SubResource("CompressedTexture2D_ih5g2")
+script = ExtResource("4_khrsj")
+
+[node name="Button" type="TextureButton" parent="MarginContainer2/preview/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_ag5ra")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(512, 512)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -567.0
+offset_right = 543.0
+offset_bottom = -55.0
+grow_vertical = 0
+theme_override_constants/margin_left = 31
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(512, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 150
+theme_override_constants/v_separation = 128
+columns = 3
+
+[node name="scene_transition" parent="." instance=ExtResource("9_yugwb")]
+
+[connection signal="pressed" from="HBoxContainer2/prev_button" to="." method="_on_prev_button_pressed"]
+[connection signal="pressed" from="HBoxContainer2/01-001" to="." method="_on__pressed"]
+[connection signal="pressed" from="HBoxContainer2/next_button" to="." method="_on_next_button_pressed"]
+[connection signal="update_stars" from="MarginContainer2/preview" to="MarginContainer2/preview/VBoxContainer/stars" method="_on_preview_update_stars"]
+[connection signal="pressed" from="MarginContainer2/preview/VBoxContainer/Button" to="MarginContainer2/preview" method="_on_button_pressed"]

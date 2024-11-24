@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5xriaqorcpf1"]
+
+[ext_resource type="Script" path="res://scripts/pixel.gd" id="1_hl6c7"]
+[ext_resource type="Texture2D" uid="uid://c5ykwc3wne8uv" path="res://assets/pixel.png" id="1_mt6ug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p4ew"]
+size = Vector2(16, 16)
+
+[node name="pixel_piece" type="Area2D" groups=["pixel_group"]]
+collision_mask = 2
+linear_damp_space_override = 3
+linear_damp = 30.576
+script = ExtResource("1_hl6c7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_6p4ew")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(16, 16)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mt6ug")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

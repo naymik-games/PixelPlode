@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://llhlnxc3hrsx"]
+
+[ext_resource type="Texture2D" uid="uid://c5ykwc3wne8uv" path="res://assets/pixel.png" id="1_31qjs"]
+
+[sub_resource type="Curve" id="Curve_cghjf"]
+_data = [Vector2(0, 0.980451), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_qr1er"]
+curve = SubResource("Curve_cghjf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8j1q8"]
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_qr1er")
+color = Color(0.419608, 0.627451, 0.47451, 1)
+
+[node name="Trail" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+show_behind_parent = true
+process_material = SubResource("ParticleProcessMaterial_8j1q8")
+texture = ExtResource("1_31qjs")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cel1go4i3af36"]
+
+[ext_resource type="Script" path="res://scripts/bomb.gd" id="1_sgmuo"]
+[ext_resource type="Texture2D" uid="uid://c8b5nbxlvy26n" path="res://assets/all_bombs.png" id="2_p6v12"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vrlvg"]
+friction = 0.25
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q36jf"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ychfa"]
+radius = 36.0
+
+[node name="Bomb_split" type="RigidBody2D" node_paths=PackedStringArray("blast_radius", "layer") groups=["bombs"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_vrlvg")
+gravity_scale = 0.0
+linear_damp = 0.6
+script = ExtResource("1_sgmuo")
+type = "split"
+blast_radius = NodePath("blast_radius")
+layer = NodePath("CanvasLayer")
+taps_allowed = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_p6v12")
+hframes = 8
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q36jf")
+
+[node name="blast_radius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="blast_radius"]
+shape = SubResource("CircleShape2D_ychfa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

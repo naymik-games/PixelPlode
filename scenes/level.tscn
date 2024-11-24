@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1yh4w2jgymt7"]
+
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_aycxi"]
+[ext_resource type="Texture2D" uid="uid://csy5io77a4n5" path="res://assets/level_panel.png" id="2_2mbcu"]
+[ext_resource type="Texture2D" uid="uid://qin8rju8pjpp" path="res://assets/level_back_select.png" id="3_s6n84"]
+[ext_resource type="FontFile" uid="uid://b6871hvsncspa" path="res://assets/Gamer.ttf" id="4_oe3t3"]
+[ext_resource type="Texture2D" uid="uid://bv7r0pooqh0s8" path="res://assets/stars0.png" id="4_y1wqs"]
+[ext_resource type="Script" path="res://scripts/stars.gd" id="5_e4u5x"]
+[ext_resource type="Texture2D" uid="uid://carg0x05a84k4" path="res://assets/lock_icon.png" id="7_l03dw"]
+
+[node name="level" type="Button" groups=["level_group"]]
+offset_right = 8.0
+offset_bottom = 8.0
+script = ExtResource("1_aycxi")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(150, 128)
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_2mbcu")
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+
+[node name="TextureRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_s6n84")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="level_num_label" type="Label" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_oe3t3")
+theme_override_font_sizes/font_size = 80
+text = "5"
+horizontal_alignment = 1
+
+[node name="stars" type="TextureRect" parent="MarginContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_y1wqs")
+script = ExtResource("5_e4u5x")
+
+[node name="lock_icon" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_l03dw")
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
+[connection signal="update_stars" from="." to="MarginContainer/CenterContainer/VBoxContainer/stars" method="_on_level_update_stars"]

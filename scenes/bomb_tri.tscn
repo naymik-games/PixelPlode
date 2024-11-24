@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://4j0iqlwb0beq"]
+
+[ext_resource type="Script" path="res://scripts/bomb_tri.gd" id="1_874rv"]
+[ext_resource type="Texture2D" uid="uid://c8b5nbxlvy26n" path="res://assets/all_bombs.png" id="2_rlki1"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_vrlvg"]
+friction = 0.25
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q36jf"]
+radius = 16.0
+
+[node name="Bomb_tri" type="RigidBody2D" groups=["bombs"]]
+collision_layer = 2
+physics_material_override = SubResource("PhysicsMaterial_vrlvg")
+gravity_scale = 0.0
+linear_damp = 0.6
+script = ExtResource("1_874rv")
+type = "tri"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_rlki1")
+hframes = 8
+frame = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q36jf")
+
+[node name="blast_radius" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="blast_radius"]
+polygon = PackedVector2Array(16, -70, 16, -7, 68, 30, 49, 53, 0, 16, -48, 53, -66, 30, -16, -7, -16, -70)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
