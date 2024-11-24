@@ -309,5 +309,43 @@ var levels: Dictionary = {
 	"512": {
 		"name": "NES",
 		"image": "res://assets/levels/Group 6/nes.png",
+	},
+	### 7
+	"61": {
+		"name": "Kid Icarus",
+		"image": "res://assets/levels/Group 7/07-002.png",
+	},"62": {
+		"name": "USA",
+		"image": "res://assets/levels/Group 7/08-008.png",
+	},"63": {
+		"name": "Curcuit",
+		"image": "res://assets/levels/Group 7/08-009.png",
+	},"64": {
+		"name": "FINN",
+		"image": "res://assets/levels/Group 7/08-010.png",
+	},"65": {
+		"name": "Screen",
+		"image": "res://assets/levels/Group 7/08-011.png",
+	},"66": {
+		"name": "Magnet",
+		"image": "res://assets/levels/Group 7/08-012.png",
+	},"67": {
+		"name": "Transformer",
+		"image": "res://assets/levels/Group 7/08-013.png",
+	},"68": {
+		"name": "LOTR 1",
+		"image": "res://assets/levels/Group 7/09-001.png",
+	},"69": {
+		"name": "LOTR 2",
+		"image": "res://assets/levels/Group 7/09-002.png",
+	},"610": {
+		"name": "Burger & Fries",
+		"image": "res://assets/levels/Group 7/09-003.png",
+	},"611": {
+		"name": "Car",
+		"image": "res://assets/levels/Group 7/10-001.png",
+	},"612": {
+		"name": "Sting",
+		"image": "res://assets/levels/Group 7/10-007.png",
 	}
 }
