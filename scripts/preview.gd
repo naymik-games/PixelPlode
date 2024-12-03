@@ -15,11 +15,11 @@ func _process(delta):
 
 func update_preview():
 	#preview_num_label.text = str(SaveData.current_level)
-	level_name_label.text = Levels.levels[str(SaveData.current_page)+str(SaveData.current_level)].name
-	preview_image.texture = load(Levels.levels[str(SaveData.current_page)+str(SaveData.current_level)].image)
+	level_name_label.text = Levels.levels[str(SaveData.current_page)+"-"+str(SaveData.current_level)].name
+	preview_image.texture = load(Levels.levels[str(SaveData.current_page)+"-"+str(SaveData.current_level)].image)
 	var star = 0
-	if SaveData.level_data.has(str(SaveData.current_page)+str(SaveData.current_level)):
-		star = get_star_number(SaveData.level_data[str(SaveData.current_page)+str(SaveData.current_level)].percent)
+	if SaveData.level_data.has(str(SaveData.current_page)+"-"+str(SaveData.current_level)):
+		star = get_star_number(SaveData.level_data[str(SaveData.current_page)+"-"+str(SaveData.current_level)].percent)
 		
 	else:
 		star = 0

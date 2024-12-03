@@ -22,8 +22,8 @@ func _process(delta):
 
 func update_level():
 	level_num_label.text = str(level_number)
-	if SaveData.level_data.has(str(level_page)+str(level_number)):
-		var star = get_star_number(SaveData.level_data[str(level_page)+str(level_number)].percent)
+	if SaveData.level_data.has(str(level_page)+"-"+str(level_number)):
+		var star = get_star_number(SaveData.level_data[str(level_page)+"-"+str(level_number)].percent)
 		lock_icon.hide()
 		emit_signal("update_stars",star)
 		if unlocked:

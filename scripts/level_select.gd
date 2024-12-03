@@ -25,8 +25,8 @@ func _ready():
 
 
 func update_buttons():
-	next_page_key = str(SaveData.current_page + 1) + "1"
-	prev_page_key = str(SaveData.current_page -1) + "1"
+	next_page_key = str(SaveData.current_page + 1)+"-" + "1"
+	prev_page_key = str(SaveData.current_page -1)+"-" + "1"
 	next_button.disabled = true
 	prev_button.disabled = true
 	if Levels.levels.has(prev_page_key):
@@ -43,13 +43,13 @@ func add_levels():
 		new_level.level_page = SaveData.current_page
 		new_level.level_number = level_count
 		
-		if SaveData.level_data.has(str(SaveData.current_page)+str(level_count)):
+		if SaveData.level_data.has(str(SaveData.current_page)+"-"+str(level_count)):
 			print("exists")
 			new_level.unlocked = true
 		else: 
 			if level_count == 1:
 				new_level.unlocked = true
-				SaveData.level_data[str(SaveData.current_page)+str(level_count)] = {
+				SaveData.level_data[str(SaveData.current_page)+"-"+str(level_count)] = {
 					"difficulty": SaveData.difficulty,
 					"percent": 0,
 					"unlocked": true

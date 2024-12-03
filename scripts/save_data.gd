@@ -9,7 +9,7 @@ const CONFIG_NAME = "user://pixel_plode-config.cfg"
 var level_data = {}
 
 var default_data = {
-	"01": {
+	"0-1": {
 	"difficulty": 1,
 	"percent": 0,
 	"unlocked": true

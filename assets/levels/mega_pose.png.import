@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh3f6exypogry"
-path="res://.godot/imported/bulldog.png-5906199244325280af3223d21678c2f9.ctex"
+uid="uid://dvdfmmv010umm"
+path="res://.godot/imported/mega_pose.png-b5ce52eed9ccec1a022f2754cb69435a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/bulldog.png"
-dest_files=["res://.godot/imported/bulldog.png-5906199244325280af3223d21678c2f9.ctex"]
+source_file="res://assets/levels/mega_pose.png"
+dest_files=["res://.godot/imported/mega_pose.png-b5ce52eed9ccec1a022f2754cb69435a.ctex"]
 
 [params]
 

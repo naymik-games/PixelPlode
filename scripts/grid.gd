@@ -1,5 +1,5 @@
 extends Node2D
-var level_data = Levels.levels[str(SaveData.current_page)+str(SaveData.current_level)]
+var level_data = Levels.levels[str(SaveData.current_page)+"-"+str(SaveData.current_level)]
 
 
 @onready var level_image = load(level_data["image"])
@@ -113,8 +113,8 @@ func _ready():
 	draw_image_grid()
 	create_reserve()
 	position_next_bomb()
-	if SaveData.level_data.has(str(SaveData.current_page)+str(SaveData.current_level)):
-		best_label.text = str(SaveData.level_data[str(SaveData.current_page)+str(SaveData.current_level)].percent) + "%"
+	if SaveData.level_data.has(str(SaveData.current_page)+"-"+str(SaveData.current_level)):
+		best_label.text = str(SaveData.level_data[str(SaveData.current_page)+"-"+str(SaveData.current_level)].percent) + "%"
 	else:
 		best_label.text = "--"
 	pass # Replace with function body. .get_pixelv(Vector2i(10,10)
@@ -446,14 +446,14 @@ func game_over(percent, text):
 	emit_signal("update_stars",star)
 	
 	if percent > 89:
-		SaveData.level_data[str(SaveData.current_page)+str(SaveData.current_level)] = {
+		SaveData.level_data[str(SaveData.current_page)+"-"+str(SaveData.current_level)] = {
 			"difficulty": SaveData.difficulty,
 			"percent": percent,
 		}
 		### next level
-		if !SaveData.level_data.has(str(SaveData.current_page)+str(SaveData.current_level+1)):
+		if !SaveData.level_data.has(str(SaveData.current_page)+"-"+str(SaveData.current_level+1)):
 			if SaveData.current_level+1 <= 12:
-				SaveData.level_data[str(SaveData.current_page)+str(SaveData.current_level+1)] = {
+				SaveData.level_data[str(SaveData.current_page)+"-"+str(SaveData.current_level+1)] = {
 					"difficulty": SaveData.difficulty,
 					"percent": 0,
 					"unlocked": true

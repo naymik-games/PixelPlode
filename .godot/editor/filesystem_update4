@@ -1,2 +1,10 @@
 res://scenes/home.tscn
 res://scripts/levels.gd
+res://scenes/level.tscn
+res://scripts/grid.gd
+res://scripts/level.gd
+res://scripts/level_select.gd
+res://scripts/save_data.gd
+res://scenes/game.tscn
+res://scenes/level_select.tscn
+res://scripts/preview.gd

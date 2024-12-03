@@ -1,6 +1,6 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1732452811
-export_presets.cfg::TextFile::-1::1732417923::0::1::::<><>::
+::res://::1733169413
+export_presets.cfg::TextFile::-1::1732474032::0::1::::<><>::
 icon.svg::CompressedTexture2D::8785498147060482478::1732412410::1732412467::1::::<><>::
 PP_logo_144.png::CompressedTexture2D::8316028354839941985::1732412410::1732412467::1::::<><>::
 PP_logo_512.png::CompressedTexture2D::5593595123065029644::1732412410::1732412467::1::::<><>::
@@ -41,13 +41,16 @@ NewSprite18.png::CompressedTexture2D::1836069457116291837::1732412410::173241246
 NewSprite19.png::CompressedTexture2D::173268913363125302::1732412410::1732412468::1::::<><>::
 NewSprite20.png::CompressedTexture2D::1894817605307874861::1732412410::1732412468::1::::<><>::
 NewSprite21.png::CompressedTexture2D::8294545530466369784::1732412410::1732412468::1::::<><>::
-::res://assets/levels/::1732412467
+::res://assets/levels/::1733195243
 07-009.png::CompressedTexture2D::5054418709823949229::1732412410::1732412467::1::::<><>::
 08-007.png::CompressedTexture2D::2688134329000091720::1732412410::1732412467::1::::<><>::
 10-015.png::CompressedTexture2D::8136882606959044660::1732412410::1732412467::1::::<><>::
-bulldog.png::CompressedTexture2D::7708745724969042834::1732412410::1732412467::1::::<><>::
+371.png::CompressedTexture2D::4404494621221206794::1733192997::1733192998::1::::<><>::
+32930.png::CompressedTexture2D::3486514053631861062::1733195243::1733195243::1::::<><>::
 chest.png::CompressedTexture2D::2012306385547328793::1732412410::1732412467::1::::<><>::
 Google Photos.png::CompressedTexture2D::5377106193327675433::1732412410::1732412467::1::::<><>::
+ihx4c0cvpfu61.png::CompressedTexture2D::4235780130106877117::1733191843::1733191844::1::::<><>::
+mega_pose.png::CompressedTexture2D::8639746579123584572::1733191843::1733191844::1::::<><>::
 ::res://assets/levels/Group 1/::1732412468
 01-001.png::CompressedTexture2D::3885629931787762689::1732412410::1732412468::1::::<><>::
 01-003.png::CompressedTexture2D::9102995225655467322::1732412410::1732412468::1::::<><>::
@@ -206,7 +209,7 @@ pixelart (1).png::CompressedTexture2D::7496758772134317407::1732412410::17324124
 11-013.png::CompressedTexture2D::6415443858034378651::1732412410::1732412466::1::::<><>::
 11-016.png::CompressedTexture2D::890771446278465756::1732412410::1732412466::1::::<><>::
 gb.png::CompressedTexture2D::4381964234925116717::1732412410::1732412466::1::::<><>::
-::res://assets/levels/Group 13/::1732412466
+::res://assets/levels/Group 13/::1733169413
 06-012.png::CompressedTexture2D::5155427102547905257::1732412410::1732412466::1::::<><>::
 08-005.png::CompressedTexture2D::996635131703061686::1732412410::1732412466::1::::<><>::
 09-008.png::CompressedTexture2D::8703952781125968725::1732412410::1732412466::1::::<><>::
@@ -218,6 +221,7 @@ gb.png::CompressedTexture2D::4381964234925116717::1732412410::1732412466::1::::<
 11-005.png::CompressedTexture2D::2117653880100521631::1732412410::1732412466::1::::<><>::
 11-007.png::CompressedTexture2D::2245942227231011488::1732412410::1732412466::1::::<><>::
 11-011.png::CompressedTexture2D::7256797374413842682::1732412410::1732412466::1::::<><>::
+bulldog.png::CompressedTexture2D::7708745724969042834::1732412410::1733169413::1::::<><>::
 ::res://assets/levels/Group 14/::1732412467
 06-004.png::CompressedTexture2D::7479176863328424187::1732412410::1732412466::1::::<><>::
 09-012.png::CompressedTexture2D::2384985119092424576::1732412410::1732412466::1::::<><>::
@@ -243,7 +247,7 @@ BombPowerup9.png::CompressedTexture2D::7919300360602782035::1732412410::17324124
 BombPowerup10.png::CompressedTexture2D::540230329491531162::1732412410::1732412467::1::::<><>::
 BombPowerup11.png::CompressedTexture2D::7943862797860132219::1732412410::1732412467::1::::<><>::
 BombPowerup.png::CompressedTexture2D::8239145006076589327::1732412410::1732412467::1::::<><>::
-::res://scenes/::1732416428
+::res://scenes/::1733192784
 aim_indicator.tscn::PackedScene::1034426983224858671::1732412410::0::1::::<><>::uid://dmwpnjgdea4wp::::res://assets/aim_indicator.png
 bombstatic.tscn::PackedScene::7845122082981526622::1732412410::0::1::::<><>::res://scripts/bomb_static.gd<>uid://b60kyw4yrl75s::::res://assets/static_bomb.png
 bomb_basic.tscn::PackedScene::9166179932252404833::1732412410::0::1::::<><>::res://scripts/bomb.gd<>uid://c8b5nbxlvy26n::::res://assets/all_bombs.png
@@ -252,29 +256,29 @@ bomb_mega.tscn::PackedScene::7297343303282119297::1732412410::0::1::::<><>::res:
 bomb_split.tscn::PackedScene::5077895034335484267::1732412410::0::1::::<><>::res://scripts/bomb.gd<>uid://c8b5nbxlvy26n::::res://assets/all_bombs.png
 bomb_tri.tscn::PackedScene::2055588934828228340::1732412410::0::1::::<><>::res://scripts/bomb_tri.gd<>uid://c8b5nbxlvy26n::::res://assets/all_bombs.png
 explosion_one.tscn::PackedScene::8706050762174309556::1732412410::0::1::::<><>::res://scripts/animated_explosion.gd<>uid://qeabqks55gl::::res://assets/effects/NewSprite16.png<>uid://ckegtpr4c1v2g::::res://assets/effects/NewSprite17.png<>uid://1fn2b3obloev::::res://assets/effects/NewSprite18.png<>uid://cp6yja2hk1x7::::res://assets/effects/NewSprite19.png<>uid://184msyaq0bkn::::res://assets/effects/NewSprite20.png<>uid://dqf67nyhw6hxw::::res://assets/effects/NewSprite21.png
-game.tscn::PackedScene::7704710952692423149::1732412410::0::1::::<><>::res://scripts/grid.gd<>uid://o0c4jv3gwpbb::::res://scenes/aim_indicator.tscn<>uid://bw837ibitnequ::::res://assets/dash.png<>uid://b0of6m237nk5::::res://assets/Stacked pixel.ttf<>uid://bjwu8bdf061v4::::res://assets/game_panel.png<>uid://byi5d7n7ug2t3::::res://scenes/wall.tscn<>uid://d2cwjxtm8lth0::::res://assets/switch_button.png<>uid://pv8xc6xpjclq::::res://assets/pp_logo.png<>uid://d0bpus48ecqti::::res://assets/button_0.png<>uid://bv7r0pooqh0s8::::res://assets/stars0.png<>uid://dkldr78ao4onm::::res://assets/button_1.png<>res://scripts/stars.gd<>uid://d2ycpl4w8j17r::::res://assets/button_atlas.png<>uid://b3y1euljby6qe::::res://scenes/scene_transition.tscn
-home.tscn::PackedScene::5073649648810720020::1732416428::0::1::::<><>::res://scripts/home.gd<>uid://pv8xc6xpjclq::::res://assets/pp_logo.png<>uid://c8b5nbxlvy26n::::res://assets/all_bombs.png<>uid://d2ycpl4w8j17r::::res://assets/button_atlas.png<>uid://b0of6m237nk5::::res://assets/Stacked pixel.ttf
-level.tscn::PackedScene::4261353688993301974::1732412410::0::1::::<><>::res://scripts/level.gd<>uid://csy5io77a4n5::::res://assets/level_panel.png<>uid://qin8rju8pjpp::::res://assets/level_back_select.png<>uid://b6871hvsncspa::::res://assets/Gamer.ttf<>uid://bv7r0pooqh0s8::::res://assets/stars0.png<>res://scripts/stars.gd<>uid://carg0x05a84k4::::res://assets/lock_icon.png
-level_select.tscn::PackedScene::3437257683016743058::1732412410::0::1::::<><>::res://scripts/level_select.gd<>uid://0em6c67rwgqn::::res://assets/levels/Group 1/01-010.png<>uid://d2ycpl4w8j17r::::res://assets/button_atlas.png<>res://scripts/preview.gd<>uid://pv8xc6xpjclq::::res://assets/pp_logo.png<>res://scripts/stars_preview.gd<>uid://b6871hvsncspa::::res://assets/Gamer.ttf<>uid://xto53o457vjs::::res://assets/play_button.png<>uid://b3y1euljby6qe::::res://scenes/scene_transition.tscn
+game.tscn::PackedScene::7704710952692423149::1733192784::0::1::::<><>::res://scripts/grid.gd<>uid://o0c4jv3gwpbb::::res://scenes/aim_indicator.tscn<>uid://bw837ibitnequ::::res://assets/dash.png<>uid://b0of6m237nk5::::res://assets/Stacked pixel.ttf<>uid://bjwu8bdf061v4::::res://assets/game_panel.png<>uid://byi5d7n7ug2t3::::res://scenes/wall.tscn<>uid://d2cwjxtm8lth0::::res://assets/switch_button.png<>uid://pv8xc6xpjclq::::res://assets/pp_logo.png<>uid://d0bpus48ecqti::::res://assets/button_0.png<>uid://bv7r0pooqh0s8::::res://assets/stars0.png<>uid://dkldr78ao4onm::::res://assets/button_1.png<>res://scripts/stars.gd<>uid://d2ycpl4w8j17r::::res://assets/button_atlas.png<>uid://b3y1euljby6qe::::res://scenes/scene_transition.tscn
+home.tscn::PackedScene::5073649648810720020::1733192784::0::1::::<><>::res://scripts/home.gd<>uid://pv8xc6xpjclq::::res://assets/pp_logo.png<>uid://c8b5nbxlvy26n::::res://assets/all_bombs.png<>uid://d2ycpl4w8j17r::::res://assets/button_atlas.png<>uid://b0of6m237nk5::::res://assets/Stacked pixel.ttf
+level.tscn::PackedScene::4261353688993301974::1733192784::0::1::::<><>::res://scripts/level.gd<>uid://csy5io77a4n5::::res://assets/level_panel.png<>uid://qin8rju8pjpp::::res://assets/level_back_select.png<>uid://b6871hvsncspa::::res://assets/Gamer.ttf<>uid://bv7r0pooqh0s8::::res://assets/stars0.png<>res://scripts/stars.gd<>uid://carg0x05a84k4::::res://assets/lock_icon.png
+level_select.tscn::PackedScene::3437257683016743058::1733192784::0::1::::<><>::res://scripts/level_select.gd<>uid://0em6c67rwgqn::::res://assets/levels/Group 1/01-010.png<>uid://d2ycpl4w8j17r::::res://assets/button_atlas.png<>res://scripts/preview.gd<>uid://pv8xc6xpjclq::::res://assets/pp_logo.png<>res://scripts/stars_preview.gd<>uid://b6871hvsncspa::::res://assets/Gamer.ttf<>uid://xto53o457vjs::::res://assets/play_button.png<>uid://b3y1euljby6qe::::res://scenes/scene_transition.tscn
 pixel.tscn::PackedScene::6927033865474597984::1732412410::0::1::::<><>::res://scripts/pixel.gd<>uid://c5ykwc3wne8uv::::res://assets/pixel.png
 power_up.tscn::PackedScene::7277097464091124040::1732412410::0::1::::<><>::uid://clxr0mibo8uq4::::res://assets/PU/BombPowerup2.png<>res://scripts/power_up.gd<>uid://df6uvownkax2j::::res://assets/PU/BombPowerup3.png<>uid://dilw64838b77t::::res://assets/PU/BombPowerup4.png<>uid://bjo0mh4aw8jjh::::res://assets/PU/BombPowerup5.png<>uid://dgfnau4rxwnip::::res://assets/PU/BombPowerup6.png<>uid://by8k0h4hc20us::::res://assets/PU/BombPowerup7.png<>uid://dwerg1oi55c47::::res://assets/PU/BombPowerup8.png<>uid://dk3fyqhsfes2f::::res://assets/PU/BombPowerup9.png<>uid://hxxrq407iviw::::res://assets/PU/BombPowerup10.png<>uid://dlgci3f8scmnb::::res://assets/PU/BombPowerup11.png<>uid://dpndrq00o1kgl::::res://assets/PU/BombPowerup.png<>uid://c8b5nbxlvy26n::::res://assets/all_bombs.png
 scene_transition.tscn::PackedScene::4402840224514076368::1732412410::0::1::::<><>::
 trail.tscn::PackedScene::795230816457969975::1732412410::0::1::::<><>::uid://c5ykwc3wne8uv::::res://assets/pixel.png
 wall.tscn::PackedScene::4089296522513655102::1732412410::0::1::::<><>::
-::res://scripts/::1732412410
+::res://scripts/::1733170078
 animated_explosion.gd::GDScript::-1::1732412410::0::1::::<>Node<>::
 bomb.gd::GDScript::-1::1732412410::0::1::::Bomb<>RigidBody2D<>::
 bomb_static.gd::GDScript::-1::1732412410::0::1::::Bombstatic<>Node2D<>::
 bomb_tri.gd::GDScript::-1::1732412410::0::1::::BombTri<>RigidBody2D<>::
 game.gd::GDScript::-1::1732412410::0::1::::<>RefCounted<>::
-grid.gd::GDScript::-1::1732412410::0::1::::<>Node2D<>::
+grid.gd::GDScript::-1::1733167908::0::1::::<>Node2D<>::
 home.gd::GDScript::-1::1732412410::0::1::::<>Node<>::
-level.gd::GDScript::-1::1732412410::0::1::::<>Button<>::
-levels.gd::GDScript::-1::1732412410::0::1::::<>Node<>::
-level_select.gd::GDScript::-1::1732412410::0::1::::<>Node<>::
+level.gd::GDScript::-1::1733167909::0::1::::<>Button<>::
+levels.gd::GDScript::-1::1733170078::0::1::::<>Node<>::
+level_select.gd::GDScript::-1::1733168911::0::1::::<>Node<>::
 pixel.gd::GDScript::-1::1732412410::0::1::::<>Area2D<>::
 power_up.gd::GDScript::-1::1732412410::0::1::::<>Node2D<>::
-preview.gd::GDScript::-1::1732412410::0::1::::<>HBoxContainer<>::
-save_data.gd::GDScript::-1::1732412410::0::1::::<>Node<>::
+preview.gd::GDScript::-1::1733167935::0::1::::<>HBoxContainer<>::
+save_data.gd::GDScript::-1::1733167909::0::1::::<>Node<>::
 stars.gd::GDScript::-1::1732412410::0::1::::<>TextureRect<>::
 stars_preview.gd::GDScript::-1::1732412410::0::1::::<>TextureRect<>::
