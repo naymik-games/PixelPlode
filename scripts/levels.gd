@@ -646,5 +646,43 @@ var levels: Dictionary = {
 	},"13-12": {
 		"name": "Link",
 		"image": "res://assets/levels/Group 14/link.png",
+	},
+	#15
+	"14-1": {
+		"name": "Liberty",
+		"image": "res://assets/levels/Group 15/07-009.png",
+	},"14-2": {
+		"name": "Camping",
+		"image": "res://assets/levels/Group 15/10-015.png",
+	},"14-3": {
+		"name": "Metroid Battle",
+		"image": "res://assets/levels/Group 15/371.png",
+	},"14-4": {
+		"name": "Bionic Camando",
+		"image": "res://assets/levels/Group 15/1673.png",
+	},"14-5": {
+		"name": "Chozo",
+		"image": "res://assets/levels/Group 15/1781.png",
+	},"14-6": {
+		"name": "Joe",
+		"image": "res://assets/levels/Group 15/32930.png",
+	},"14-7": {
+		"name": "Bionic Joi",
+		"image": "res://assets/levels/Group 15/bcomm-nes_raddspencer_levelover.png",
+	},"14-8": {
+		"name": "Treasure Chest",
+		"image": "res://assets/levels/Group 15/chest.png",
+	},"14-9": {
+		"name": "Photos",
+		"image": "res://assets/levels/Group 15/Google Photos.png",
+	},"14-10": {
+		"name": "Samos",
+		"image": "res://assets/levels/Group 15/ihx4c0cvpfu61.png",
+	},"14-11": {
+		"name": "Pixel Dog",
+		"image": "res://assets/levels/Group 15/PixelDog.png",
+	},"14-12": {
+		"name": "Mega Man II",
+		"image": "res://assets/levels/Group 15/mega_pose.png",
 	}
 }

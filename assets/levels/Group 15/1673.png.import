@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciuyfhlgxlqmj"
-path="res://.godot/imported/Google Photos.png-3fd7b0db2df921430ac2a8be695f94a4.ctex"
+uid="uid://c2odyqq54ykj0"
+path="res://.godot/imported/1673.png-149d68a4948b7a05fb22800815f29c13.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/Google Photos.png"
-dest_files=["res://.godot/imported/Google Photos.png-3fd7b0db2df921430ac2a8be695f94a4.ctex"]
+source_file="res://assets/levels/Group 15/1673.png"
+dest_files=["res://.godot/imported/1673.png-149d68a4948b7a05fb22800815f29c13.ctex"]
 
 [params]
 

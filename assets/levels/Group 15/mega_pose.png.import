@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b30tnav1eu3q1"
-path="res://.godot/imported/371.png-6e00ef761c355bf94a3bf92f31aba1da.ctex"
+uid="uid://dvdfmmv010umm"
+path="res://.godot/imported/mega_pose.png-93bbe58946ed7d0bfe19a89543074c6c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/371.png"
-dest_files=["res://.godot/imported/371.png-6e00ef761c355bf94a3bf92f31aba1da.ctex"]
+source_file="res://assets/levels/Group 15/mega_pose.png"
+dest_files=["res://.godot/imported/mega_pose.png-93bbe58946ed7d0bfe19a89543074c6c.ctex"]
 
 [params]
 

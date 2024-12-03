@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bekfgdxirgla3"
-path="res://.godot/imported/08-007.png-f34f7a536404975ef6ff3b53eb146902.ctex"
+uid="uid://c57un70f8p8r7"
+path="res://.godot/imported/bcomm-nes_raddspencer_levelover.png-2eca8a44d873dfbc069ae3cfa1837b80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/08-007.png"
-dest_files=["res://.godot/imported/08-007.png-f34f7a536404975ef6ff3b53eb146902.ctex"]
+source_file="res://assets/levels/Group 15/bcomm-nes_raddspencer_levelover.png"
+dest_files=["res://.godot/imported/bcomm-nes_raddspencer_levelover.png-2eca8a44d873dfbc069ae3cfa1837b80.ctex"]
 
 [params]
 

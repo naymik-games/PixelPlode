@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpw5m25v5hjsg"
-path="res://.godot/imported/32930.png-25a6be87e2721a0d9c00affe576ad82c.ctex"
+uid="uid://dkvltg02atci6"
+path="res://.godot/imported/PixelDog.png-74cc9870a13111b948dedd98f8b6078b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/levels/32930.png"
-dest_files=["res://.godot/imported/32930.png-25a6be87e2721a0d9c00affe576ad82c.ctex"]
+source_file="res://assets/levels/Group 15/PixelDog.png"
+dest_files=["res://.godot/imported/PixelDog.png-74cc9870a13111b948dedd98f8b6078b.ctex"]
 
 [params]
 
